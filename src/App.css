@@ -1,5 +1,14 @@
-.App {
+/* .App {
   text-align: center;
+} */
+
+.banner{
+  background: url(./Components/images/mobile-pic.jpg);
+  background-size: cover;
+  height: 80vh;
+  background-repeat: no-repeat;
+  margin: 10px;
+  color: aliceblue;
 }
 
 .App-logo {
