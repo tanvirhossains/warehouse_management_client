@@ -1,16 +1,20 @@
 import React from 'react';
+import Items from '../Items/Items/Items';
 import './Home.css'
 
 const Home = () => {
-    return (
-        <div>
+  return (
+    <div>
 
-<div className='banner'>
+      <div className='banner'>
         <h2>Image using</h2>
       </div>
-            
-        </div>
-    );
+<div>
+  items 
+  <Items></Items>
+</div>
+    </div>
+  );
 };
 
 export default Home;

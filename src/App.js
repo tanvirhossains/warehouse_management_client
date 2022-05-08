@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import pic from '../src/Components/images/mobile-pic.jpg'
 import './App.css'
@@ -12,6 +11,7 @@ import SignUp from './Components/pages/SignInOut/SignUp/SignUp';
 import AddItem from './Components/pages/Items/AddItem/AddItem';
 import ManageItem from './Components/pages/Items/ManageItem/ManageItem';
 import Blogs from './Components/pages/Blogs/Blogs';
+import Footer from './Components/pages/Footer/Footer';
 
 function App() {
   return (
@@ -19,8 +19,6 @@ function App() {
       <Header></Header>
 
       
-
-      <h1>connected</h1>
 
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
@@ -36,6 +34,8 @@ function App() {
         <Route path=''></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+
+      <Footer></Footer>
     </div>
   );
 }
