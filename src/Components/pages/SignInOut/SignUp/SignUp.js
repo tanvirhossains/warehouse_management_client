@@ -15,30 +15,34 @@ const SignUp = () => {
 
     const emailRef = useRef('')
     const passwordRef = useRef('')
-
+    let errMessege
 
     const handleEmail = event => {
         console.log(event.target.value)
     }
 
     const handleSubmit = event => {
-          event.preventDefault()
+        event.preventDefault()
         const email = emailRef.current.value
         const password = passwordRef.current.value
         createUserWithEmailAndPassword(email, password)
         console.log(email, password)
     }
+    if (error) {
+        errMessege = <p>Error: {error.message}</p>
+    }
 
 
     return (
-        <div className='signIn-container'>
+        <div className='w-50 mx-auto signIn-container'>
             <h1 className='text-center'>sign Up </h1>
-            <form onClick={handleSubmit} className='text-center' >
-                <input  ref={emailRef} type="email" name="email" required />
+            <form onClick={handleSubmit} className='text ' >
+                <input ref={emailRef} type="email" name="email" required />
                 <br />
                 <input type="password" ref={passwordRef} name="password" required />
                 <br />
-                <input type="button"  value="Sing up" />
+                <h4 className='text-danger'>{errMessege}</h4>
+                <input type="button" value="Sing up" />
                 <p>Have an account? <Link to='/signIn'> Sign In</Link></p>
 
             </form>
