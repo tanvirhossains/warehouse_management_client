@@ -5,17 +5,17 @@ import auth from '../../../../firebase.init';
 import './Item.css'
 
 const Item = ({ item }) => {
-    const { name, price, supplierName, img, description, id } = item
+    const { name, price, supplierName, img, description, _id } = item
     const [user, loading, error] = useAuthState(auth);
     const navigate = useNavigate()
 
 
 
     const handleManageItem = (id) => {
-        // if (!user) {
-        //     navigate('/signIn')
-        // }
-        navigate(`/inventory/${id}`)
+        if (!user) {
+            navigate('/signIn')
+        }
+        navigate(`/inventory/${_id}`)
 
     }
 
@@ -29,7 +29,7 @@ const Item = ({ item }) => {
                     <h3>Name: {name}</h3>
                     <h3>Supplier Company: {supplierName}</h3>
                     <h4> price: ${price}</h4>
-                    <button onClick={() => handleManageItem(id)} >manage Item</button>
+                    <button onClick={() => handleManageItem(_id)} >manage Item</button>
 
                 </div>
             </div>
