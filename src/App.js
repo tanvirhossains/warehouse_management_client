@@ -1,5 +1,5 @@
 import './App.css';
-import pic from '../src/Components/images/mobile-pic.jpg'
+// import pic from '../src/Components/images/mobile-pic.jpg'
 import './App.css'
 import { Route, Routes } from 'react-router-dom';
 import Header from '../src/Components/pages/Header/Header.js'
@@ -29,14 +29,14 @@ function App() {
         <Route path='/signin' element={<SignIn></SignIn>}></Route>
         <Route path='/signUp' element={<SignUp></SignUp>}></Route>
         <Route path='/addItem' element={<AddItem></AddItem>}></Route>
-        
+
         <Route path='/manageItem' element={
           <RequireAuth>
             <ManageItem></ManageItem>
           </RequireAuth>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
 
-        <Route path='/inventory' element={
+        <Route path='/inventory/:itemId' element={
           <RequireAuth>
             <Inventory></Inventory>
           </RequireAuth>

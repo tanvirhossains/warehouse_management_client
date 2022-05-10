@@ -1,5 +1,6 @@
 [
-    {
+    { 
+        "id":1,
         "name": "Infinix-Note-12",
         "description": "Infinix Note 12 comes with 6.7 inches Full HD+ AMOLED screen. It has a waterdrop notch front camera design. The back camera is of triple 50+2+0.3 Megapixel with PDAF, depth sensor, dedicated macro lens, quad-LED flash, HDR etc. and Full HD video recording. The front camera is of 16 MP. Infinix Note 12 comes with 5000 mAh battery with 33W fast charging. It has 6 GB RAM, up to 2 GHz octa-core CPU and Mali-G52 MC2 GPU. It is powered by a Mediatek Helio G88 (12 nm) chipset. The device comes with 128 GB internal storage and dedicated MicroSD slot. There is a side-mounted fingerprint sensor in this phone.",
         "firstRelease":"August 25, 2021",
@@ -11,10 +12,11 @@
         "img": "https://i.ibb.co/1rL3TNm/Infinix-Note-12.jpg",
         "camera": "Triple 50+2+0.3 Megapixel",
         "quantity": 0,
-        "battery-type": "Li-Po 4500 mAh, non-removable:",
+        "batteryType": "Li-Po 4500 mAh, non-removable:",
         "charging": "Fast charging 33W, 31% in 15 min, 100% in 63 min (advertised) Reverse charging USB Power Delivery"
     },
-    {
+    { 
+        "id":2,
         "name": "Oppo-F21-Pro",
         "description": "Oppo F21 Pro comes with 6.43 inches Full HD+ AMOLED screen. It has a left punch-hole front camera design. The back camera is of triple 64+2+2 MP with PDAF, LED flash, f/1.7 aperture, microscope, depth sensor, etc. features and Full HD video recording option. The front camera is of 32 MP. Oppo F21 Pro comes with 4500 mAh battery with 33W fast charging. It has 8 GB RAM, up to 2.4 GHz octa-core CPU and Adreno 610 GPU. It is powered by a Qualcomm Snapdragon 680 4G (6 nm) chipset. The device comes with 128 GB internal storage and dedicated MicroSD slot. There is an optical in-display fingerprint sensor in this phone.",
         "firstRelease":"November 20, 2021",
@@ -26,10 +28,11 @@
         "img": "https://i.ibb.co/RgVhW4z/Oppo-F21-Pro.jpg",
         "camera": "Triple 64+2+2 Megapixel",
         "quantity": 0,
-        "battery-type": "Lithium-polymer 4500 mAh (non-removable)",
+        "batteryType": "Lithium-polymer 4500 mAh (non-removable)",
         "charging": "Fast charging 33W"
     },
-    {
+    { 
+        "id":3,
         "name": "Samsung-Galaxy-A33-5-G",
         "description": "Samsung Galaxy A33 5G comes with 6.4 inches Full HD+ Super AMOLED screen. It has a waterdrop notch front camera design. The back camera is of Quad 48+8+5+2 with PDAF, OIS, ultrawide, depth sensor, dedicated macro camera etc. and Ultra HD video recording. The front camera is of 13 MP. Galaxy A33 5G comes with 5000 mAh battery with 25W fast charging. It has 6 or 8 GB RAM, up to 2.4 GHz octa-core CPU and Mali-G68 GPU. It is powered by a Exynos 1280 (5 nm) chipset. The device comes with 128 or 256 GB internal storage and shared MicroSD slot. There is an in-display optical fingerprint sensor in this phone.",
         "firstRelease":"January 15, 2022",
@@ -41,10 +44,11 @@
         "img": "https://i.ibb.co/FXXrT4d/Samsung-Galaxy-A33-5-G.jpg",
         "camera": "Quad 48+8+5+2 Megapixel",
         "quantity": 0,
-        "battery-type": "Lithium-polymer 5000 mAh (non-removable)",
+        "batteryType": "Lithium-polymer 5000 mAh (non-removable)",
         "charging": "25W Fast Charging"
     },
-    {
+    { 
+        "id":4,
         "name": "Samsung-Galaxy-A73-5-G",
         "description": "Samsung Galaxy A73 5G comes with 6.7 inches Full HD+ Super AMOLED Plus screen. It has a center punch-hole front camera design. The back camera is of Quad 108+12+5+5 with PDAF, OIS, ultrawide, depth sensor, dedicated macro camera etc. and Ultra HD video recording. The front camera is of 32 MP. Galaxy A73 5G comes with 5000 mAh battery with 25W fast charging. It has 6 or 8 GB RAM, up to 2.4 GHz octa-core CPU and Adreno 642L GPU. It is powered by a Qualcomm Snapdragon 778G 5G (6 nm) chipset. The device comes with 128 or 256 GB internal storage and shared MicroSD slot. There is an in-display optical fingerprint sensor in this phone.",
         "firstRelease":"March 15, 2022",
@@ -57,10 +61,11 @@
         "img": "https://i.ibb.co/DYkhx0B/Samsung-Galaxy-A73-5-G.jpg",
         "camera": "Quad 108+12+5+5 Megapixel",
         "quantity": 0,
-        "battery-type": "Lithium-polymer 5000 mAh (non-removable)",
+        "batteryType": "Lithium-polymer 5000 mAh (non-removable)",
         "charging": "25W Fast Charging"
     },
-    {
+    { 
+        "id":5,
         "name": "Tecno-Spark-8-Pro",
         "description": "Tecno Spark 8 Pro comes with 6.8 inches Full HD+ IPS LCD screen. It has a punch-hole design with stylish back. The back camera is of triple 48 MP main camera. It has PDAF, quad-LED flash, HDR etc. features. The front camera is of 8 MP. Tecno Spark 8 Pro comes with 5000 mAh big battery and 33W fast charging facility. It has 4 or 6 GB RAM, up to 2.0 GHz octa-core CPU and Mali G52 GPU. It is powered by a Mediatek Helio G85 (12nm) chipset. The device comes with 64 GB internal storage and dedicated MicroSD slot. There is a side-mounted fingerprint sensor in this phone.",
         "firstRelease":"February 15, 2022",
@@ -73,10 +78,11 @@
         "img": "https://i.ibb.co/fFg4PYc/Tecno-Spark-8-Pro-image-new.jpg",
         "camera": "TTriple 48 Megapixel main camera",
         "quantity": 0,
-        "battery-type": "Lithium-polymer 5000 mAh (non-removable)",
+        "batteryType": "Lithium-polymer 5000 mAh (non-removable)",
         "charging": "33W Fast Charging"
     },
-    {
+    { 
+        "id":6,
         "name": "Vivo-V23e",
         "description": "Infinix Note 12 comes with 6.7 inches Full HD+ AMOLED screen. It has a waterdrop notch front camera design. The back camera is of triple 50+2+0.3 Megapixel with PDAF, depth sensor, dedicated macro lens, quad-LED flash, HDR etc. and Full HD video recording. The front camera is of 16 MP. Infinix Note 12 comes with 5000 mAh battery with 33W fast charging. It has 6 GB RAM, up to 2 GHz octa-core CPU and Mali-G52 MC2 GPU. It is powered by a Mediatek Helio G88 (12 nm) chipset. The device comes with 128 GB internal storage and dedicated MicroSD slot. There is a side-mounted fingerprint sensor in this phone.",
         "firstRelease":"Decembar 9, 2021",
@@ -89,7 +95,7 @@
         "img": "https://i.ibb.co/jwf3mbm/Vivo-V23e-image.jpg",
         "camera": "Triple 64+8+2 Megapixel",
         "quantity": 0,
-        "battery-type": "Lithium-polymer 4050 mAh (non-removable)",
+        "batteryType": "Lithium-polymer 4050 mAh (non-removable)",
         "charging": "44W Fast Charging (69% in 30 minutes)"
     }
 ]
