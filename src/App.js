@@ -1,6 +1,4 @@
 import './App.css';
-// import pic from '../src/Components/images/mobile-pic.jpg'
-import './App.css'
 import { Route, Routes } from 'react-router-dom';
 import Header from '../src/Components/pages/Header/Header.js'
 import Home from './Components/pages/Home/Home';

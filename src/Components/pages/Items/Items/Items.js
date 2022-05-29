@@ -12,12 +12,8 @@ const Items = () => {
             <h1 className='text-center'>Items</h1>
             <div className=' item-info'>
                 {
-                    items.map(item =>
-                      
-                            <Item
+                    items.map(item => <Item
                                 item={item}></Item>
-                          
-
                     )
                 }
 

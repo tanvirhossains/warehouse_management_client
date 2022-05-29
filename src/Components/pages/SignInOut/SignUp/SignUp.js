@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../../firebase.init';
+import Loading from '../../Shared/Loading';
 
 
 const SignUp = () => {
@@ -12,40 +13,58 @@ const SignUp = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
+    const [updateProfile, updating, uError] = useUpdateProfile(auth);
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    const navigate = useNavigate()
+    let errMessage
 
-    const emailRef = useRef('')
-    const passwordRef = useRef('')
-    let errMessege
-
-    const handleEmail = event => {
-        console.log(event.target.value)
-    }
 
     const handleSubmit = event => {
         event.preventDefault()
-        const email = emailRef.current.value
-        const password = passwordRef.current.value
+
+        const name = event.target.name.value
+        const email = event.target.email.value
+        const password = event.target.password.value
         createUserWithEmailAndPassword(email, password)
+        
         console.log(email, password)
     }
+    if (loading) {
+        return <Loading></Loading>
+    }
     if (error) {
-        errMessege = <p>Error: {error.message}</p>
+        errMessage = <p>Error: {error.message}</p>
+    }
+    if (user) {
+        navigate('/')
     }
 
-
     return (
-        <div className='w-50 mx-auto signIn-container'>
+        <div className='signIn-container card w-50 mx-auto'>
             <h1 className='text-center'>sign Up </h1>
-            <form onClick={handleSubmit} className='text ' >
-                <input ref={emailRef} type="email" name="email" required />
+            <form onSubmit={handleSubmit} action="" className=''>
+                <label htmlFor="">
+                    <span className='fs-3 fw-bold'> Name</span>
+                </label><br />
+                <input type="text"   placeholder='name' name="name" id="" required /><br />
+                <label htmlFor="">
+                    <span className='fs-3 fw-bold'> Email</span>
+                </label><br />
+                <input type="email" placeholder='email' name="email" id="" required /><br />
+                <label htmlFor="">
+                    <span className='fs-3 fw-bold'>Password</span>
+                </label><br />
+                <input type="password"  placeholder='password' name="password" id="" required />
                 <br />
-                <input type="password" ref={passwordRef} name="password" required />
-                <br />
-                <h4 className='text-danger'>{errMessege}</h4>
-                <input type="button" value="Sing up" />
-                <p>Have an account? <Link to='/signIn'> Sign In</Link></p>
+                <p className='text-danger'> {errMessage}</p>
+                <input type="submit" value="Sing in" />
+                <p>Are you new? <Link to='/signIn'> Sign In</Link></p>
 
+                {/* <a href="">Forget Password?</a> */}
+                <button onClick={() => signInWithGoogle()}>Sign In with Google</button>
             </form>
+
+
         </div>
     );
 };
