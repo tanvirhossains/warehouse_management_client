@@ -7,10 +7,10 @@ const Home = () => {
     <div>
 
       <div className='banner'>
-       
+       <h1>this is </h1>
       </div>
       <div>
-        items
+     
         <Items></Items>
       </div>
     </div>

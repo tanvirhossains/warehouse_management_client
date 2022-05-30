@@ -2,15 +2,14 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../../firebase.init';
-import './Item.css'
+import './ManageInventoryItem.css'
 
-const Item = ({ item }) => {
-        const { name, price, supplierName, img, description, _id } = item
-    const [user] = useAuthState(auth);
+const ManageInventoryItem = ({ item }) => {
+    const { name, price, supplierName, img, description, _id } = item
+
+    const [user] = useAuthState(auth)
+
     const navigate = useNavigate()
-
-
-
     const handleManageItem = (id) => {
         if (!user) {
             navigate('/signIn')
@@ -18,13 +17,11 @@ const Item = ({ item }) => {
         navigate(`/inventory/${_id}`)
 
     }
-
-
     return (
         <div className=''>
 
-            <div className=' '>
-                <img className='w-100' src={img} alt="" />
+            <div className='d-flex justify-content-between align-items-center manage-inventory'>
+                <img className='' src={img} alt="" />
                 <div>
                     <h3>Name: {name}</h3>
                     <h3>Supplier Company: {supplierName}</h3>
@@ -32,9 +29,12 @@ const Item = ({ item }) => {
                     <button onClick={() => handleManageItem(_id)} >manage Item</button>
 
                 </div>
+                <div>
+                    <button>Delete</button>
+                </div>
             </div>
         </div>
     );
 };
 
-export default Item;
+export default ManageInventoryItem;
