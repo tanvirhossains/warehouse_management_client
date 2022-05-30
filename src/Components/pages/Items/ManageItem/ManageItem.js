@@ -6,7 +6,7 @@ import ManageInventoryItem from './ManageInventoryItem';
 import './ManageItem.css'
 
 const ManageItem = () => {
-    const [items] = UseItem()
+    const [items, setItems] = UseItem()
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = output => {
@@ -44,13 +44,34 @@ const ManageItem = () => {
 
 
 
+    const handleDelete = id => {
+        const proceed = window.confirm('are you sure , do you want to delete')
+        if (proceed) {
+
+            fetch(`http://localhost:4000/product/${id}`, {
+                method: 'delete',
+            })
+                .then(res => res.json())
+                .then(data => {
+
+                    const exist = items.filter(product => product._id !== id)
+                    setItems(exist)
+                    toast.success('item deleted!!!')
+                })
+
+        }
+
+    }
+
+
     return (
         <div>
             <h1>Manage item</h1>
             <div className=''>
                 {
                     items.map(item => <ManageInventoryItem
-                        item={item}></ManageInventoryItem>)
+                        item={item}
+                        handleDelete={handleDelete}></ManageInventoryItem>)
                 }
             </div>
             <div className='input-form'>

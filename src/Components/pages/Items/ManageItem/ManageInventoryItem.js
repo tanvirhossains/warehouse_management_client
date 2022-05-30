@@ -4,7 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import auth from '../../../../firebase.init';
 import './ManageInventoryItem.css'
 
-const ManageInventoryItem = ({ item }) => {
+const ManageInventoryItem = ({ item , handleDelete }) => {
+
+
     const { name, price, supplierName, img, description, _id } = item
 
     const [user] = useAuthState(auth)
@@ -30,7 +32,7 @@ const ManageInventoryItem = ({ item }) => {
 
                 </div>
                 <div>
-                    <button>Delete</button>
+                    <button onClick={()=>handleDelete(_id)}>Delete</button>
                 </div>
             </div>
         </div>

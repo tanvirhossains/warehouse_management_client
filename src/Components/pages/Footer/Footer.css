@@ -1,4 +1,9 @@
 .footer-container{
-    /* position:fixed; */
+    position:static;
     bottom: 0;
+    background-color: black;
+    color: aliceblue;
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
 }
