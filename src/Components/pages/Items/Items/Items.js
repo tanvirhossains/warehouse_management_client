@@ -11,7 +11,7 @@ const Items = () => {
             <h1 className='text-center'>Items</h1>
             <div className=' item-info'>
                 {
-                    items.slice(0,3).map(item => <Item
+                    items.slice(0,6).map(item => <Item
                                 item={item}></Item>
                     )
                 }

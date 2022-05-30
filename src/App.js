@@ -12,6 +12,9 @@ import Blogs from './Components/pages/Blogs/Blogs';
 import Footer from './Components/pages/Footer/Footer';
 import Inventory from './Components/pages/Inventory/Inventory';
 import RequireAuth from './Components/pages/RequireAuth/RequireAuth';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
@@ -43,7 +46,7 @@ function App() {
         <Route path=''></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
-
+      <ToastContainer />
       <Footer></Footer>
     </div>
   );
