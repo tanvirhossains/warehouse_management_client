@@ -24,7 +24,7 @@ const ManageItem = () => {
             img: output.imgUrl
         }
 
-        fetch(`http://localhost:4000/product`, {
+        fetch(`https://immense-anchorage-72136.herokuapp.com/product`, {
             method: 'POST',
             headers: {
                 "Content-type": 'application/json'
@@ -48,7 +48,7 @@ const ManageItem = () => {
         const proceed = window.confirm('are you sure , do you want to delete')
         if (proceed) {
 
-            fetch(`http://localhost:4000/product/${id}`, {
+            fetch(`https://immense-anchorage-72136.herokuapp.com/product/${id}`, {
                 method: 'delete',
             })
                 .then(res => res.json())

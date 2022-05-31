@@ -8,7 +8,7 @@ const Inventory = () => {
     const [quantity, setQuantity] = useState()
 
     useEffect(() => {
-        const url = `http://localhost:4000/product/${itemId}`
+        const url = `https://immense-anchorage-72136.herokuapp.com/product/${itemId}`
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data))
@@ -20,7 +20,7 @@ const Inventory = () => {
     //     headers: { 'Content-Type': 'application/json' },
     //     body: JSON.stringify({ title: 'React PUT Request Example' })
     // };
-    // fetch(`http://localhost:4000/product/${itemId}`, requestOptions)
+    // fetch(`https://immense-anchorage-72136.herokuapp.com/product/${itemId}`, requestOptions)
     //     .then(response => response.json())
     //     .then(data => this.setQuantity({ postId: data.id }));
 
@@ -39,7 +39,7 @@ const Inventory = () => {
         // const newQuantity = updatedUser + name
 
         // send data to the server
-        const url = `http://localhost:4000/product/${itemId}`
+        const url = `https://immense-anchorage-72136.herokuapp.com/product/${itemId}`
         fetch(url, {
             method: 'PUT',
             headers: {
